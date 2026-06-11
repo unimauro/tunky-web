@@ -1,22 +1,34 @@
 # Tunky — sitio web (tunky.net)
 
-Web de **Tunky**: estudio de datos y software. Portafolio de tableros en producción +
-servicios productizados (dashboards, observatorios, MVPs, bots, mantenimiento). Estático,
-multilingüe (ES / EN / PT), sin build. Pensado para subir a **Hostinger** tal cual.
+Web de **Tunky**: estudio de **IA, datos y software**. Posicionamiento **IA-first**
+("convertimos tu empresa en IA-first"). Portafolio de tableros en producción + capacidades
+de IA (agentes, copilotos, automatización) + servicios productizados. Estático, multilingüe
+(ES / EN / PT), optimizado para SEO. Pensado para subir a **Hostinger** tal cual.
+
+**Contacto cableado:** WhatsApp +51 940 584 307 · carlos@cardenas.pe
 
 ## Estructura
 ```
-index.html     · estructura y secciones
+index.html     · secciones + SEO (meta, Open Graph, Twitter, hreflang, JSON-LD)
 styles.css     · tema "sala de control" dark + acento eléctrico
-app.js         · datos (portafolio real, servicios, productos), i18n ES/EN/PT, interacciones
+app.js         · datos (IA, portafolio, servicios, productos), i18n ES/EN/PT, interacciones
+robots.txt     · indexación + referencia al sitemap
+sitemap.xml    · sitemap con hreflang por idioma
+og.png / og.svg· imagen para compartir en redes (1200×630)
 ```
 
-## Antes de publicar — EDITA esto en `app.js`
-1. **WhatsApp:** `const WA_NUMBER = "51999999999";` → pon el número real de Tunky (formato
-   internacional sin `+`, ej. `51987654321`).
-2. **Email/contacto:** en `index.html`, los enlaces `#waLink` y `#mailLink` muestran
-   `+51 999 999 999` y `hola@tunky.net` → reemplaza por los reales.
-3. (Opcional) Agrega/quita tableros del array `WORK`, servicios en `SVC`, productos en `PROD`.
+## SEO incluido
+- Title/description con keywords (IA-first, agentes, software a medida Perú…).
+- Open Graph + Twitter Card + imagen `og.png`.
+- `hreflang` ES/EN/PT/x-default y `?lang=` en la URL para cada idioma.
+- JSON-LD `ProfessionalService` con teléfono, email, idiomas y servicios.
+- `robots.txt` + `sitemap.xml`.
+- **Pendiente para rankear mejor:** dar de alta `tunky.net` en Google Search Console
+  y enviar el sitemap; conseguir backlinks (LinkedIn, directorios).
+
+## Editable (opcional)
+- Tableros en el array `WORK`, capacidades IA en `AI`, servicios en `SVC`, productos en `PROD` (todos en `app.js`).
+- Agregar idioma: nuevo bloque en `I18N` + campos `es/en/pt`→`xx` en los arrays + botón en el nav.
 
 ## Idiomas
 ES (por defecto), EN, PT. Se cambian con el selector del nav y se recuerda la elección.
