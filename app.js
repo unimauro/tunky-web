@@ -373,6 +373,47 @@ const I18N = {
     "proc.4t":"納品","proc.4p":"あなたのドメインに、研修付きで。保守はオプション。" },
 };
 
+/* --- Compartir (i18n) --- */
+const SHARE_STR = {
+  es:{title:"¿Te sirve? Compártelo.",desc:"Ayúdanos a llegar a quien necesite volverse IA-first.",copy:"Copiar enlace",copied:"¡Copiado!",msg:"Tunky convierte tu empresa en IA-first 🚀 agentes, copilotos y dashboards a medida:"},
+  en:{title:"Useful? Share it.",desc:"Help us reach whoever needs to go AI-first.",copy:"Copy link",copied:"Copied!",msg:"Tunky makes your company AI-first 🚀 agents, copilots and custom dashboards:"},
+  pt:{title:"Útil? Compartilhe.",desc:"Ajude-nos a alcançar quem precisa se tornar IA-first.",copy:"Copiar link",copied:"Copiado!",msg:"A Tunky torna sua empresa IA-first 🚀 agentes, copilotos e dashboards sob medida:"},
+  fr:{title:"Utile ? Partagez-le.",desc:"Aidez-nous à toucher ceux qui doivent devenir IA-first.",copy:"Copier le lien",copied:"Copié !",msg:"Tunky rend votre entreprise IA-first 🚀 agents, copilotes et tableaux de bord sur mesure :"},
+  zh:{title:"觉得有用？分享出去。",desc:"帮助我们触达需要变得 AI 优先的人。",copy:"复制链接",copied:"已复制！",msg:"Tunky 让您的企业 AI 优先 🚀 智能体、副驾驶和定制看板："},
+  ja:{title:"役に立ちましたか？シェアを。",desc:"AIファーストになるべき人に届くよう、力を貸してください。",copy:"リンクをコピー",copied:"コピーしました！",msg:"Tunkyがあなたの会社をAIファーストに 🚀 エージェント・コパイロット・オーダーメイドのダッシュボード："},
+};
+// inyecta share.title/desc en I18N para el loop data-i18n
+for(const l in SHARE_STR){ I18N[l]["share.title"]=SHARE_STR[l].title; I18N[l]["share.desc"]=SHARE_STR[l].desc; }
+
+const SHARE_URL = "https://tunky.net/";
+const SVG = {
+  wa:'<svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26C2.16 6.51 6.6 2.08 12.05 2.08c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0012.05.16C5.5.16.16 5.5.16 12.05c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41Z"/></svg>',
+  fb:'<svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.45 18.63.07 12 .07S0 5.45 0 12.07c0 5.99 4.39 10.95 10.12 11.85v-8.38H7.08v-3.47h3.04V9.43c0-3 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.03 24 18.06 24 12.07z"/></svg>',
+  li:'<svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0z"/></svg>',
+  x:'<svg viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26L23.05 22h-6.66l-5.21-6.82L4.99 22H1.68l7.73-8.84L1.25 2.25H8.08l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></svg>',
+  cp:'<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>',
+};
+function renderShare(){
+  const s=SHARE_STR[LANG]||SHARE_STR.es;
+  const u=encodeURIComponent(SHARE_URL), tx=encodeURIComponent(s.msg);
+  const el=document.getElementById("shareBtns"); if(!el) return;
+  el.innerHTML=`
+    <a class="sbtn wa" href="https://wa.me/?text=${tx}%20${u}" target="_blank" rel="noopener">${SVG.wa}WhatsApp</a>
+    <a class="sbtn fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener">${SVG.fb}Facebook</a>
+    <a class="sbtn li" href="https://www.linkedin.com/sharing/share-offsite/?url=${u}" target="_blank" rel="noopener">${SVG.li}LinkedIn</a>
+    <a class="sbtn x" href="https://twitter.com/intent/tweet?text=${tx}&url=${u}" target="_blank" rel="noopener">${SVG.x}X</a>
+    <button class="sbtn cp" id="copyBtn" type="button">${SVG.cp}<span id="copyTxt">${s.copy}</span></button>`;
+  const cb=document.getElementById("copyBtn");
+  cb.addEventListener("click",async()=>{
+    try{
+      if(navigator.share){ await navigator.share({title:"Tunky",text:s.msg,url:SHARE_URL}); return; }
+      await navigator.clipboard.writeText(SHARE_URL);
+    }catch(_){}
+    cb.classList.add("ok"); document.getElementById("copyTxt").textContent=s.copied;
+    setTimeout(()=>{cb.classList.remove("ok");document.getElementById("copyTxt").textContent=s.copy;},1800);
+  });
+}
+
 let LANG = "es";
 
 /* --- render --- */
@@ -412,6 +453,8 @@ function render(){
   // process
   const steps=[1,2,3,4].map(n=>`<div class="proc io"><h3>${I18N[L]["proc."+n+"t"]}</h3><p>${I18N[L]["proc."+n+"p"]}</p></div>`).join("");
   document.getElementById("procGrid").innerHTML = steps;
+  // share
+  renderShare();
   // static i18n nodes
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k=el.getAttribute("data-i18n"); if(I18N[L][k]!==undefined) el.textContent=I18N[L][k];
@@ -473,4 +516,63 @@ function tunkySubmit(e){
   document.getElementById("year").textContent="2026";
   const wa=document.getElementById("waLink"); if(wa) wa.href=`https://wa.me/${WA_NUMBER}`;
   render();
+  bgfx();
 })();
+
+/* ===== fondo IA: red neuronal animada ===== */
+function bgfx(){
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv=document.getElementById("bgfx"); if(!cv) return;
+  const ctx=cv.getContext("2d");
+  let w,h,dpr,nodes,raf,pulses;
+  const ACC=[198,242,78], MNT=[123,224,192];
+  function size(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    w=cv.clientWidth; h=cv.clientHeight;
+    cv.width=w*dpr; cv.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const target=Math.min(90,Math.floor(w*h/16000));
+    nodes=Array.from({length:target},()=>({
+      x:Math.random()*w, y:Math.random()*h,
+      vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25,
+      r:Math.random()*1.6+.6
+    }));
+    pulses=[];
+  }
+  function step(){
+    ctx.clearRect(0,0,w,h);
+    const D=140;
+    // líneas entre nodos cercanos
+    for(let i=0;i<nodes.length;i++){
+      const a=nodes[i];
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<0||a.x>w)a.vx*=-1; if(a.y<0||a.y>h)a.vy*=-1;
+      for(let j=i+1;j<nodes.length;j++){
+        const b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, dist=Math.hypot(dx,dy);
+        if(dist<D){
+          const op=(1-dist/D)*.28;
+          ctx.strokeStyle=`rgba(${MNT[0]},${MNT[1]},${MNT[2]},${op})`;
+          ctx.lineWidth=.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+          // pulso ocasional viajando por la conexión
+          if(Math.random()<0.0008) pulses.push({ax:a.x,ay:a.y,bx:b.x,by:b.y,t:0});
+        }
+      }
+    }
+    // nodos
+    for(const n of nodes){
+      ctx.fillStyle=`rgba(${ACC[0]},${ACC[1]},${ACC[2]},.55)`;
+      ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,6.283); ctx.fill();
+    }
+    // pulsos de "señal"
+    pulses=pulses.filter(p=>p.t<=1);
+    for(const p of pulses){
+      p.t+=0.03;
+      const x=p.ax+(p.bx-p.ax)*p.t, y=p.ay+(p.by-p.ay)*p.t;
+      ctx.fillStyle=`rgba(${ACC[0]},${ACC[1]},${ACC[2]},${1-p.t})`;
+      ctx.beginPath(); ctx.arc(x,y,2.2,0,6.283); ctx.fill();
+    }
+    raf=requestAnimationFrame(step);
+  }
+  size(); step();
+  let rt; window.addEventListener("resize",()=>{cancelAnimationFrame(raf);clearTimeout(rt);rt=setTimeout(()=>{size();step();},200);});
+  document.addEventListener("visibilitychange",()=>{ if(document.hidden){cancelAnimationFrame(raf);} else {cancelAnimationFrame(raf);step();} });
+}
