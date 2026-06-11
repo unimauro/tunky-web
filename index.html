@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tunky — Datos en decisiones · Software & Dashboards a medida</title>
+<meta name="description" content="Tunky construye software a medida, dashboards de inteligencia y MVPs. 16+ tableros en producción. Datos públicos convertidos en decisiones." />
+<meta property="og:title" content="Tunky — Convertimos datos en decisiones" />
+<meta property="og:description" content="Software a medida, dashboards de inteligencia y MVPs. 16+ tableros en producción." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tunky.net/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- blueprint grid backdrop -->
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Tunky">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">tunky</span>
+    <span class="brand-dot">.</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work" data-i18n="nav.work">Trabajo</a>
+    <a href="#services" data-i18n="nav.services">Servicios</a>
+    <a href="#products" data-i18n="nav.products">Productos</a>
+    <a href="#process" data-i18n="nav.process">Proceso</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Idioma">
+      <button data-lang="es" class="active">ES</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="pt">PT</button>
+    </div>
+    <a href="#contact" class="btn btn-sm" data-i18n="nav.cta">Conversemos</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag mono reveal" data-i18n="hero.kicker">// estudio de datos &amp; software · Perú → LATAM</div>
+    <h1 class="hero-title">
+      <span class="reveal" data-d="1" data-i18n="hero.l1">Convertimos datos</span>
+      <span class="reveal accent" data-d="2" data-i18n="hero.l2">en decisiones.</span>
+    </h1>
+    <p class="hero-sub reveal" data-d="3" data-i18n="hero.sub">Software a medida, dashboards de inteligencia y MVPs que sí se lanzan. No vendemos promesas: mostramos tableros en producción.</p>
+    <div class="hero-cta reveal" data-d="4">
+      <a href="#work" class="btn" data-i18n="hero.ctaWork">Ver el trabajo</a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaTalk">Pedir una propuesta</a>
+    </div>
+    <div class="hero-stats reveal" data-d="5">
+      <div class="stat"><span class="stat-n mono" data-count="16">16</span><span class="stat-l" data-i18n="hero.s1">tableros en vivo</span></div>
+      <div class="stat"><span class="stat-n mono" data-count="40">40</span><span class="stat-l" data-i18n="hero.s2">proyectos construidos</span></div>
+      <div class="stat"><span class="stat-n mono">7d</span><span class="stat-l" data-i18n="hero.s3">a tu primer dashboard</span></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>DASHBOARDS</span><span class="sep">/</span><span>ETL</span><span class="sep">/</span><span>SaaS MVP</span><span class="sep">/</span><span>GRAFOS</span><span class="sep">/</span><span>BOTS WHATSAPP</span><span class="sep">/</span><span>IA APLICADA</span><span class="sep">/</span><span>DATA PÚBLICA</span><span class="sep">/</span>
+      <span>DASHBOARDS</span><span class="sep">/</span><span>ETL</span><span class="sep">/</span><span>SaaS MVP</span><span class="sep">/</span><span>GRAFOS</span><span class="sep">/</span><span>BOTS WHATSAPP</span><span class="sep">/</span><span>IA APLICADA</span><span class="sep">/</span><span>DATA PÚBLICA</span><span class="sep">/</span>
+    </div>
+  </div>
+
+  <!-- WORK / PORTFOLIO -->
+  <section class="section" id="work">
+    <div class="sec-head">
+      <div class="sec-num mono">01</div>
+      <h2 data-i18n="work.title">Tableros en producción</h2>
+      <p class="sec-desc" data-i18n="work.desc">Cada uno está vivo ahora mismo. Haz clic y compruébalo. Esto es lo que podemos construir con tus datos.</p>
+    </div>
+    <div class="work-grid" id="workGrid"><!-- injected --></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="sec-head">
+      <div class="sec-num mono">02</div>
+      <h2 data-i18n="services.title">Lo que hacemos, con precio claro</h2>
+      <p class="sec-desc" data-i18n="services.desc">Alcance y precio fijos. Sin sorpresas, sin “depende”. 50% para arrancar.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid"><!-- injected --></div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="sec-head">
+      <div class="sec-num mono">03</div>
+      <h2 data-i18n="products.title">Productos que construimos</h2>
+      <p class="sec-desc" data-i18n="products.desc">SaaS propios que prueban que no solo asesoramos: enviamos producto.</p>
+    </div>
+    <div class="prod-grid" id="prodGrid"><!-- injected --></div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="sec-head">
+      <div class="sec-num mono">04</div>
+      <h2 data-i18n="process.title">Cómo trabajamos</h2>
+    </div>
+    <div class="proc-grid" id="procGrid"><!-- injected --></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contact-card">
+      <div class="contact-left">
+        <h2 data-i18n="contact.title">¿Tienes datos? Tienes un dashboard.</h2>
+        <p data-i18n="contact.desc">Cuéntanos qué quieres ver claro. Te respondemos con una propuesta concreta — alcance, precio y plazo.</p>
+        <div class="contact-channels">
+          <a class="chan" id="waLink" href="https://wa.me/51999999999" target="_blank" rel="noopener">
+            <span class="chan-ic">✺</span><span>WhatsApp</span><span class="chan-v mono">+51 999 999 999</span>
+          </a>
+          <a class="chan" id="mailLink" href="mailto:hola@tunky.net">
+            <span class="chan-ic">✉</span><span>Email</span><span class="chan-v mono">hola@tunky.net</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" onsubmit="return tunkySubmit(event)">
+        <label><span data-i18n="contact.fName">Nombre</span><input type="text" name="name" required /></label>
+        <label><span data-i18n="contact.fOrg">Empresa / organización</span><input type="text" name="org" /></label>
+        <label><span data-i18n="contact.fNeed">¿Qué necesitas?</span>
+          <select name="need">
+            <option data-i18n="contact.o1">Dashboard a medida</option>
+            <option data-i18n="contact.o2">Observatorio / ETL</option>
+            <option data-i18n="contact.o3">App o SaaS (MVP)</option>
+            <option data-i18n="contact.o4">Bot / automatización</option>
+            <option data-i18n="contact.o5">Otro</option>
+          </select>
+        </label>
+        <label><span data-i18n="contact.fMsg">Mensaje</span><textarea name="msg" rows="3"></textarea></label>
+        <button type="submit" class="btn btn-block" data-i18n="contact.send">Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="foot-brand"><span class="brand-mark sm" aria-hidden="true"></span> tunky<span class="brand-dot">.</span></div>
+  <p class="foot-tag" data-i18n="footer.tag">Datos públicos, hechos inteligencia. Lima · LATAM.</p>
+  <p class="foot-copy mono">© <span id="year">2026</span> Tunky — <span data-i18n="footer.rights">Todos los derechos reservados</span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
