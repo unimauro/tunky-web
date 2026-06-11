@@ -85,6 +85,11 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-heigh
 
 /* hero */
 .hero{max-width:var(--maxw);margin:0 auto;padding:70px 28px 40px;text-align:center}
+.hero-pill{display:inline-flex;align-items:center;gap:9px;margin-bottom:28px;
+  font-family:"JetBrains Mono";font-size:12.5px;letter-spacing:.02em;color:var(--acc-2);
+  background:rgba(123,224,192,.06);border:1px solid var(--line-2);border-radius:30px;padding:7px 16px}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--acc);
+  box-shadow:0 0 10px var(--acc);animation:pulse 2s infinite}
 .hero-tag{color:var(--acc-2);font-size:13px;letter-spacing:.04em;margin-bottom:26px}
 .hero-title{font-size:clamp(46px,9vw,108px);display:flex;flex-direction:column;align-items:center}
 .hero-title .accent{color:var(--acc)}
@@ -110,6 +115,22 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-heigh
 .sec-num{color:var(--acc);font-size:13px;letter-spacing:.1em;margin-bottom:14px}
 .sec-head h2{font-size:clamp(30px,5vw,52px)}
 .sec-desc{margin-top:16px;color:var(--fg-dim);font-size:17px}
+
+/* ai-first */
+.aifirst{padding-top:60px}
+.ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.ai-card{background:linear-gradient(155deg,rgba(123,224,192,.05),var(--panel));
+  border:1px solid var(--line);border-radius:var(--r);padding:30px;
+  display:flex;flex-direction:column;gap:13px;transition:.25s var(--ease);position:relative;overflow:hidden}
+.ai-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,var(--acc),var(--acc-2));transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease)}
+.ai-card:hover{border-color:var(--line-2);transform:translateY(-4px)}
+.ai-card:hover::before{transform:scaleX(1)}
+.ai-ic{width:48px;height:48px;border-radius:13px;background:var(--ink-2);border:1px solid var(--line-2);
+  display:grid;place-items:center;font-size:24px;color:var(--acc)}
+.ai-card h3{font-size:23px;font-weight:600}
+.ai-card p{color:var(--fg-dim);font-size:15px;line-height:1.6}
 
 /* work grid */
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -209,6 +230,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-heigh
 @media(max-width:920px){
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .proc-grid{grid-template-columns:repeat(2,1fr)}
+  .ai-grid{grid-template-columns:1fr}
   .contact-card{grid-template-columns:1fr;padding:30px}
   .nav-links{display:none}
 }

@@ -79,6 +79,26 @@ const WORK = [
     pt:"Demo de plataforma SaaS multiagente com orquestração de tarefas." },
 ];
 
+/* --- Capacidades IA-first --- */
+const AI = [
+  { ic:"◈", t:{es:"Copilotos a tu medida",en:"Custom copilots",pt:"Copilotos sob medida"},
+    p:{es:"Un asistente que conoce TU negocio: responde, redacta y consulta tus datos en lenguaje natural. Como el copiloto que ya integramos en ConTodo ERP.",
+       en:"An assistant that knows YOUR business: answers, writes and queries your data in natural language. Like the copilot we built into ConTodo ERP.",
+       pt:"Um assistente que conhece o SEU negócio: responde, redige e consulta seus dados em linguagem natural. Como o copiloto que já integramos no ConTodo ERP."} },
+  { ic:"⟁", t:{es:"Agentes que ejecutan",en:"Agents that act",pt:"Agentes que executam"},
+    p:{es:"No solo conversan: rastrean licitaciones, califican leads, generan reportes y envían cobros por WhatsApp mientras tú duermes.",
+       en:"They don't just chat: they track tenders, qualify leads, generate reports and send payment links on WhatsApp while you sleep.",
+       pt:"Não só conversam: rastreiam licitações, qualificam leads, geram relatórios e enviam cobranças no WhatsApp enquanto você dorme."} },
+  { ic:"⌁", t:{es:"Procesos automatizados",en:"Automated workflows",pt:"Processos automatizados"},
+    p:{es:"Identificamos las tareas repetitivas que comen tu día y las convertimos en flujos que corren solos, con IA donde aporta.",
+       en:"We find the repetitive tasks eating your day and turn them into flows that run themselves, with AI where it adds value.",
+       pt:"Identificamos as tarefas repetitivas que consomem seu dia e as transformamos em fluxos que rodam sozinhos, com IA onde agrega."} },
+  { ic:"◉", t:{es:"Decisiones con datos",en:"Data-driven decisions",pt:"Decisões com dados"},
+    p:{es:"Dashboards e inteligencia que cruzan tus datos con fuentes públicas y te dicen qué hacer, no solo qué pasó.",
+       en:"Dashboards and intelligence that cross your data with public sources and tell you what to do, not just what happened.",
+       pt:"Dashboards e inteligência que cruzam seus dados com fontes públicas e dizem o que fazer, não só o que aconteceu."} },
+];
+
 /* --- Servicios productizados --- */
 const SVC = [
   { ic:"▦", feat:false, key:"dash", price:"S/ 1,500+", time:"1–2 sem",
@@ -143,12 +163,13 @@ const PROD = [
 
 /* --- i18n (UI) --- */
 const I18N = {
-  es:{ "nav.work":"Trabajo","nav.services":"Servicios","nav.products":"Productos","nav.process":"Proceso","nav.cta":"Conversemos",
-    "hero.kicker":"// estudio de datos & software · Perú → LATAM",
-    "hero.l1":"Convertimos datos","hero.l2":"en decisiones.",
-    "hero.sub":"Software a medida, dashboards de inteligencia y MVPs que sí se lanzan. No vendemos promesas: mostramos tableros en producción.",
-    "hero.ctaWork":"Ver el trabajo","hero.ctaTalk":"Pedir una propuesta",
+  es:{ "nav.ai":"IA-first","nav.work":"Trabajo","nav.services":"Servicios","nav.products":"Productos","nav.process":"Proceso","nav.cta":"Conversemos",
+    "hero.pill":"IA-first · agentes · copilotos · automatización",
+    "hero.l1":"Convertimos tu empresa","hero.l2":"en IA-first.",
+    "hero.sub":"Agentes, copilotos y dashboards de inteligencia que trabajan por ti. Software a medida que sí se lanza — y datos hechos decisiones. No vendemos promesas: mostramos producto en producción.",
+    "hero.ctaWork":"Ver el trabajo","hero.ctaTalk":"Convertir mi empresa",
     "hero.s1":"tableros en vivo","hero.s2":"proyectos construidos","hero.s3":"a tu primer dashboard",
+    "ai.title":"Qué significa ser IA-first con Tunky","ai.desc":"No es ponerle un chatbot encima. Es rediseñar cómo trabaja tu empresa para que la IA haga el trabajo pesado.",
     "work.title":"Tableros en producción","work.desc":"Cada uno está vivo ahora mismo. Haz clic y compruébalo. Esto es lo que podemos construir con tus datos.",
     "services.title":"Lo que hacemos, con precio claro","services.desc":"Alcance y precio fijos. Sin sorpresas, sin “depende”. 50% para arrancar.",
     "products.title":"Productos que construimos","products.desc":"SaaS propios que prueban que no solo asesoramos: enviamos producto.",
@@ -162,12 +183,13 @@ const I18N = {
     "proc.2t":"Proponemos","proc.2p":"Alcance, precio y plazo por escrito. Sin letra chica.",
     "proc.3t":"Construimos","proc.3p":"Avances visibles cada semana. Tú apruebas, nosotros enviamos.",
     "proc.4t":"Entregamos","proc.4p":"En tu dominio, con capacitación. Mantenimiento opcional." },
-  en:{ "nav.work":"Work","nav.services":"Services","nav.products":"Products","nav.process":"Process","nav.cta":"Let's talk",
-    "hero.kicker":"// data & software studio · Peru → LATAM",
-    "hero.l1":"We turn data","hero.l2":"into decisions.",
-    "hero.sub":"Custom software, intelligence dashboards and MVPs that actually ship. We don't sell promises — we show dashboards in production.",
-    "hero.ctaWork":"See the work","hero.ctaTalk":"Request a proposal",
+  en:{ "nav.ai":"AI-first","nav.work":"Work","nav.services":"Services","nav.products":"Products","nav.process":"Process","nav.cta":"Let's talk",
+    "hero.pill":"AI-first · agents · copilots · automation",
+    "hero.l1":"We make your company","hero.l2":"AI-first.",
+    "hero.sub":"Agents, copilots and intelligence dashboards that work for you. Custom software that actually ships — and data turned into decisions. We don't sell promises — we show product in production.",
+    "hero.ctaWork":"See the work","hero.ctaTalk":"Transform my company",
     "hero.s1":"live dashboards","hero.s2":"projects built","hero.s3":"to your first dashboard",
+    "ai.title":"What being AI-first with Tunky means","ai.desc":"It's not slapping a chatbot on top. It's redesigning how your company works so AI does the heavy lifting.",
     "work.title":"Dashboards in production","work.desc":"Every one is live right now. Click and check. This is what we can build with your data.",
     "services.title":"What we do, priced clearly","services.desc":"Fixed scope and price. No surprises, no “it depends”. 50% to start.",
     "products.title":"Products we build","products.desc":"Our own SaaS — proof we don't just advise, we ship.",
@@ -181,12 +203,13 @@ const I18N = {
     "proc.2t":"We propose","proc.2p":"Scope, price and timeline in writing. No fine print.",
     "proc.3t":"We build","proc.3p":"Visible progress every week. You approve, we ship.",
     "proc.4t":"We deliver","proc.4p":"On your domain, with training. Maintenance optional." },
-  pt:{ "nav.work":"Trabalho","nav.services":"Serviços","nav.products":"Produtos","nav.process":"Processo","nav.cta":"Vamos conversar",
-    "hero.kicker":"// estúdio de dados & software · Peru → LATAM",
-    "hero.l1":"Transformamos dados","hero.l2":"em decisões.",
-    "hero.sub":"Software sob medida, dashboards de inteligência e MVPs que realmente saem. Não vendemos promessas — mostramos painéis em produção.",
-    "hero.ctaWork":"Ver o trabalho","hero.ctaTalk":"Pedir uma proposta",
+  pt:{ "nav.ai":"IA-first","nav.work":"Trabalho","nav.services":"Serviços","nav.products":"Produtos","nav.process":"Processo","nav.cta":"Vamos conversar",
+    "hero.pill":"IA-first · agentes · copilotos · automação",
+    "hero.l1":"Tornamos sua empresa","hero.l2":"IA-first.",
+    "hero.sub":"Agentes, copilotos e dashboards de inteligência que trabalham por você. Software sob medida que realmente sai — e dados virando decisões. Não vendemos promessas: mostramos produto em produção.",
+    "hero.ctaWork":"Ver o trabalho","hero.ctaTalk":"Transformar minha empresa",
     "hero.s1":"painéis no ar","hero.s2":"projetos construídos","hero.s3":"até seu primeiro painel",
+    "ai.title":"O que é ser IA-first com a Tunky","ai.desc":"Não é colocar um chatbot por cima. É redesenhar como sua empresa trabalha para que a IA faça o trabalho pesado.",
     "work.title":"Painéis em produção","work.desc":"Cada um está no ar agora. Clique e confira. É isto que podemos construir com seus dados.",
     "services.title":"O que fazemos, com preço claro","services.desc":"Escopo e preço fixos. Sem surpresas, sem “depende”. 50% para começar.",
     "products.title":"Produtos que construímos","products.desc":"SaaS próprios que provam que não só aconselhamos: entregamos produto.",
@@ -207,6 +230,13 @@ let LANG = "es";
 /* --- render --- */
 function render(){
   const L = LANG;
+  // ai-first
+  document.getElementById("aiGrid").innerHTML = AI.map(a=>`
+    <div class="ai-card">
+      <div class="ai-ic">${a.ic}</div>
+      <h3>${a.t[L]}</h3>
+      <p>${a.p[L]}</p>
+    </div>`).join("");
   // work
   document.getElementById("workGrid").innerHTML = WORK.map(w=>`
     <a class="card" href="${w.url}" target="_blank" rel="noopener" onmousemove="cardGlow(event)">
@@ -269,7 +299,7 @@ function observe(){
 }
 
 /* contact -> whatsapp */
-const WA_NUMBER = "51999999999"; // TODO: reemplazar por el WhatsApp real de Tunky
+const WA_NUMBER = "51940584307"; // WhatsApp Tunky / Carlos
 function tunkySubmit(e){
   e.preventDefault();
   const f=e.target, d=new FormData(f);
@@ -284,10 +314,14 @@ function tunkySubmit(e){
 
 /* boot */
 (function init(){
-  try{const s=localStorage.getItem("tunky_lang"); if(s&&I18N[s]){LANG=s;
-    document.querySelectorAll(".lang button").forEach(x=>x.classList.toggle("active",x.dataset.lang===s));}}catch(_){}
+  // 1) ?lang= en la URL manda (para SEO/hreflang y compartir), 2) preferencia guardada, 3) idioma del navegador
+  let pick=null;
+  try{ const u=new URLSearchParams(location.search).get("lang"); if(u&&I18N[u]) pick=u; }catch(_){}
+  if(!pick){ try{ const s=localStorage.getItem("tunky_lang"); if(s&&I18N[s]) pick=s; }catch(_){} }
+  if(!pick){ const n=(navigator.language||"es").slice(0,2); if(I18N[n]) pick=n; }
+  if(pick) LANG=pick;
+  document.querySelectorAll(".lang button").forEach(x=>x.classList.toggle("active",x.dataset.lang===LANG));
   document.getElementById("year").textContent="2026";
-  // set whatsapp links
   const wa=document.getElementById("waLink"); if(wa) wa.href=`https://wa.me/${WA_NUMBER}`;
   render();
 })();
