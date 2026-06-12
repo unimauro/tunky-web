@@ -525,7 +525,7 @@ function bgfx(){
   const cv=document.getElementById("bgfx"); if(!cv) return;
   const ctx=cv.getContext("2d");
   let w,h,dpr,nodes,raf,pulses;
-  const ACC=[198,242,78], MNT=[123,224,192];
+  const ACC=[198,242,78], MNT=[79,214,255];  /* nodos lima · conexiones cian holográfico */
   function size(){
     dpr=Math.min(window.devicePixelRatio||1,2);
     w=cv.clientWidth; h=cv.clientHeight;
@@ -549,9 +549,9 @@ function bgfx(){
       for(let j=i+1;j<nodes.length;j++){
         const b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, dist=Math.hypot(dx,dy);
         if(dist<D){
-          const op=(1-dist/D)*.28;
+          const op=(1-dist/D)*.32;
           ctx.strokeStyle=`rgba(${MNT[0]},${MNT[1]},${MNT[2]},${op})`;
-          ctx.lineWidth=.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+          ctx.lineWidth=.7; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
           // pulso ocasional viajando por la conexión
           if(Math.random()<0.0008) pulses.push({ax:a.x,ay:a.y,bx:b.x,by:b.y,t:0});
         }
@@ -562,14 +562,17 @@ function bgfx(){
       ctx.fillStyle=`rgba(${ACC[0]},${ACC[1]},${ACC[2]},.55)`;
       ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,6.283); ctx.fill();
     }
-    // pulsos de "señal"
+    // pulsos de "señal" (con glow)
     pulses=pulses.filter(p=>p.t<=1);
+    ctx.shadowColor=`rgba(${ACC[0]},${ACC[1]},${ACC[2]},.9)`;
     for(const p of pulses){
       p.t+=0.03;
       const x=p.ax+(p.bx-p.ax)*p.t, y=p.ay+(p.by-p.ay)*p.t;
+      ctx.shadowBlur=10;
       ctx.fillStyle=`rgba(${ACC[0]},${ACC[1]},${ACC[2]},${1-p.t})`;
-      ctx.beginPath(); ctx.arc(x,y,2.2,0,6.283); ctx.fill();
+      ctx.beginPath(); ctx.arc(x,y,2.4,0,6.283); ctx.fill();
     }
+    ctx.shadowBlur=0;
     raf=requestAnimationFrame(step);
   }
   size(); step();
