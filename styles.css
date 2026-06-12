@@ -255,10 +255,28 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-heigh
 @media(max-width:560px){
   .work-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr}
-  .hero-stats{gap:28px}
-  .section{padding:70px 22px}
-  .nav{padding:14px 20px;gap:12px}
+  .svc-grid{grid-template-columns:1fr}
+  .prod-grid{grid-template-columns:1fr}
+  .hero{padding:48px 20px 32px}
+  .hero-stats{gap:24px}
+  .stat-n{font-size:28px}
+  .section{padding:66px 20px}
+  .sec-head{margin-bottom:34px}
+  .nav{padding:12px 16px;gap:10px;flex-wrap:wrap}
   .brand-name{display:inline}
+  .nav-right{gap:10px;width:100%;justify-content:space-between}
+  .lang{gap:1px;padding:2px}
+  .lang button{font-size:11px;padding:4px 6px}
+  .btn-sm{padding:8px 13px;font-size:13px}
+  .marquee-track{font-size:16px}
+  .ai-card{padding:24px}
+  .contact-card{padding:24px}
+  .share-btns{gap:9px}
+  .sbtn{padding:11px 15px;font-size:13.5px}
+}
+@media(max-width:380px){
+  .lang button{font-size:10.5px;padding:4px 5px}
+  .hero-title{font-size:clamp(38px,11vw,52px)}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
